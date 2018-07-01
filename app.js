@@ -17,7 +17,7 @@ const postTweet = function( id, origText ) {
 	const permalink = 'https://twitter.com/albert_rivera/status/' + id;
 	const text = '"' + mimimify( origText ) + '"';
 	let params = {
-		status:  text + permalink,
+		status:  text + ' ' + permalink,
 	}
 	twitterClient.post('statuses/update', params, function( err, response ) {
 	if(err){
