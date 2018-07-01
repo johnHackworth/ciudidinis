@@ -14,7 +14,7 @@ const albertParams = {
 const twitterClient = new Twitter(config);
 
 const postTweet = function( id, origText ) {
-	const permalink = 'https://twitter.com/JohnHackworth/status/' + id;
+	const permalink = 'https://twitter.com/albert_rivera/status/' + id;
 	const text = '"' + mimimify( origText ) + '"';
 	let params = {
 		status:  text + permalink,
