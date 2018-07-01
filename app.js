@@ -48,7 +48,7 @@ let checklastTweet = function() {
 let checkRandomTweet = function() {
 	let albertParamsRandom = {
 		screen_name: 'albert_rivera',
-		result_type: 'recent',
+ 		result_type: 'recent',
 		tweet_mode: 'extended',
 		lang: 'es',
 		count: Math.ceil( 3200 * Math.random() ),
@@ -66,12 +66,11 @@ let checkRandomTweet = function() {
 	  		}
 		} 
 	);
-	let timeout2 = 30 * 60 * 1000 + Math.ceil( Math.random() * 30 * 60 * 1000 );
+	let timeout2 = 3 * 60 * 1000 + Math.ceil( Math.random() * 3 * 60 * 1000 );
 	setTimeout( checkRandomTweet, timeout2 );
 }
 
 let start = function() {
-	console
 	checklastTweet();
 	checkRandomTweet();
 }
