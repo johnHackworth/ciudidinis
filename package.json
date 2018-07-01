@@ -1,0 +1,11 @@
+{
+  "name": "ciudidinis-bot",
+  "version": "1.0.0",
+  "description": "Nodejs Twitter Bot",
+  "main": "app.js",
+  "author": "Javi Alvarez",
+  "dependencies": {
+    "twitter": "^1.7.1",
+    "underscore": "^1.9.1"
+  }
+}
