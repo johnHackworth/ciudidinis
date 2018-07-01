@@ -48,7 +48,6 @@ let checklastTweet = function() {
 let checkRandomTweet = function() {
 	let albertParamsRandom = {
 		screen_name: 'albert_rivera',
-		count: 1,
 		result_type: 'recent',
 		tweet_mode: 'extended',
 		lang: 'es',
