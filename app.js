@@ -35,6 +35,15 @@ let checklastTweet = function() {
 		function( err, data, response ) {
 		  	if( !err ) {
 		  		for( let i = 0; i < data.length; i++ ) {
+		  			if ( data[i].full_text.indexOf( 'RT' ) === 0) {
+		  				if ( Math.rand() < 0.90 ) {
+		  					return;
+		  				}
+		  			} else if( data[i].full_text.length > 100 ) {
+		  				if ( Math.rand() < 0.70 ) {
+		  					return;
+		  				}
+		  			}
 		  			postTweet( data[ i ].id_str, data[ i ].full_text );
 		      	} 
 		     } else {
@@ -66,7 +75,7 @@ let checkRandomTweet = function() {
 	  		}
 		} 
 	);
-	let timeout2 = 3 * 60 * 1000 + Math.ceil( Math.random() * 3 * 60 * 1000 );
+	let timeout2 = 30 * 60 * 1000 + Math.ceil( Math.random() * 600 * 60 * 1000 );
 	setTimeout( checkRandomTweet, timeout2 );
 }
 
