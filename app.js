@@ -36,11 +36,11 @@ let checklastTweet = function() {
 		  	if( !err ) {
 		  		for( let i = 0; i < data.length; i++ ) {
 		  			if ( data[i].full_text.indexOf( 'RT' ) === 0) {
-		  				if ( Math.rand() < 0.90 ) {
+		  				if ( Math.random() < 0.90 ) {
 		  					return;
 		  				}
 		  			} else if( data[i].full_text.length > 100 ) {
-		  				if ( Math.rand() < 0.70 ) {
+		  				if ( Math.random() < 0.70 ) {
 		  					return;
 		  				}
 		  			}
